@@ -32,12 +32,6 @@ export default {
   buildModules: [
     '@nuxtjs/vuetify',
   ],
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false, // or true for dark mode
-    },
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
