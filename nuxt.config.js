@@ -1,5 +1,6 @@
 export default {
-  buildDir: 'nuxt-dist',
+  buildDir: 'dist', // This specifies the output directory for the build
+  // ...other configuration options
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'my-text-copy-app',
