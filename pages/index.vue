@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>Chào bạn</p>
     <clipboard-input ref="clipboardInput"></clipboard-input>
     <v-btn @click="copyText">Copy</v-btn>
 
