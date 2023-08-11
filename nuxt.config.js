@@ -1,5 +1,5 @@
 export default {
-  buildDir: 'dist', // This specifies the output directory for the build
+  buildDir: 'dist',// This specifies the output directory for the build
   // ...other configuration options
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

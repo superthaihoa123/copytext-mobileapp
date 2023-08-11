@@ -6,9 +6,12 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run start"
   },
   "dependencies": {
+    "@capacitor/android": "5.2.2",
     "@capacitor/cli": "^5.2.2",
     "@capacitor/core": "^5.2.2",
     "core-js": "^3.25.3",
