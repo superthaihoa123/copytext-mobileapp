@@ -1,7 +1,0 @@
-{
-  "name": "my-text-copy-app",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "custom"
-}
