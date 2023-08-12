@@ -1,48 +1,37 @@
 <template>
   <div>
     <p>Chào bạn</p>
-    <clipboard-input ref="clipboardInput"></clipboard-input>
-    <v-btn @click="copyText">Copy</v-btn>
-
-    <!-- Centered Snackbar -->
-    <v-snackbar
-      v-model="showSnackbar"
-      :timeout="3000"
-      top
-      color="success"
-      :style="{ left: '50%', transform: 'translateX(-50%)' }"
-    >
-      Text has been copied!
-    </v-snackbar>
+    <v-text-field v-model="textInput" label="...nhập text ở đây"></v-text-field>
+    <v-btn @click="copyText" color="black" dark>Copy</v-btn>
+    <v-snackbar v-model="snackbar" :timeout="3000" top>{{ snackbarMessage }}</v-snackbar>
   </div>
 </template>
 
 <script>
-import ClipboardInput from "@/components/ClipboardInput.vue";
+import { Plugins } from '@capacitor/core';
+
+const { Clipboard } = Plugins;
 
 export default {
-  components: {
-    ClipboardInput,
-  },
   data() {
     return {
-      copied: false,
-      showSnackbar: false,
+      textInput: '',
+      snackbar: false,
+      snackbarMessage: '',
     };
   },
   methods: {
-    copyText() {
-      const inputComponent = this.$refs.clipboardInput;
-      const text = inputComponent.text;
-
-      if (text) {
-        navigator.clipboard.writeText(text);
-        this.showSnackbar = true;
-
-        // Reset snackbar after 3 seconds
-        setTimeout(() => {
-          this.showSnackbar = false;
-        }, 3000);
+    async copyText() {
+      if (this.textInput) {
+        try {
+          await Clipboard.write({
+            string: this.textInput,
+          });
+          this.snackbarMessage = 'Text copied to clipboard';
+          this.snackbar = true;
+        } catch (error) {
+          console.error('Error copying text:', error);
+        }
       }
     },
   },

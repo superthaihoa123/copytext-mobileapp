@@ -13,7 +13,8 @@
   "dependencies": {
     "@capacitor/android": "5.2.3",
     "@capacitor/app": "5.0.6",
-    "@capacitor/core": "5.2.3",
+    "@capacitor/clipboard": "^5.0.6",
+    "@capacitor/core": "^5.2.3",
     "@capacitor/haptics": "5.0.6",
     "@capacitor/keyboard": "5.0.6",
     "@capacitor/status-bar": "5.0.6",
@@ -25,7 +26,7 @@
     "vuetify": "^2.7.1"
   },
   "devDependencies": {
-    "@capacitor/cli": "5.2.3",
+    "@capacitor/cli": "^5.2.3",
     "@nuxtjs/vuetify": "^1.12.3",
     "cypress": "^12.17.3"
   }

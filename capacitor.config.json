@@ -1,0 +1,8 @@
+{
+  "appId": "my.text.copy.app",
+  "appName": "my-text-copy-app",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
